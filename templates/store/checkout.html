@@ -1,0 +1,95 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}
+Thanh toán
+{% endblock %}
+
+		{% block content %}
+        <!-- Start Bradcaump area -->
+        <div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url({% static 'images/bg/3.jpg' %}) no-repeat scroll center center / cover ;">
+            <div class="ht__bradcaump__wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="bradcaump__inner text-center">
+                                <h2 class="bradcaump-title">Thanh toán</h2>
+                                <nav class="bradcaump-inner">
+                                  <a class="breadcrumb-item" href="{% url 'home' %}">Trang chủ</a>
+                                  <span class="brd-separetor">/</span>
+                                  <a class="breadcrumb-item" href="{% url 'carts' %}">Giỏ hàng</a>
+                                  <span class="brd-separetor">/</span>
+                                  <span class="breadcrumb-item active">Thanh toán</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Bradcaump area -->
+        <!-- Start Checkout Area -->
+        <section class="our-checkout-area ptb--120 bg__white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-lg-6">
+                        <div class="ckeckout-left-sidebar">
+                            <!-- Start Checkbox Area -->
+                            <div class="checkout-form">
+                                <h2 class="section-title-3">Thông tin giao hàng</h2>
+                                <div class="checkout-form-inner">
+                                    <div class="single-checkout-box">
+                                        <input type="text" placeholder="Họ và tên*">
+                                        <!-- <input type="text" placeholder="Last Name*"> -->
+                                    </div>
+                                    <div class="single-checkout-box">
+                                        <input type="text" placeholder="Sđt*">
+                                        <!-- <input type="text" placeholder="Phone*"> -->
+                                    </div>
+                                    <div class="single-checkout-box">
+                                        <textarea name="message" placeholder="Địa chỉ*"></textarea>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- End Checkbox Area -->
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-6">
+                        <div class="checkout-right-sidebar">
+                            <div class="our-important-note">
+                                <h2 class="section-title-3">Phương thức thanh toán :</h2>
+                                <br>
+                                <ul class="important-note">
+                                    <li><i class="zmdi zmdi-caret-right-circle"></i>TK Agribank - 0123456789 - Chủ TK Nguyễn Văn A</li>
+                                    <li><i class="zmdi zmdi-caret-right-circle"></i>TK Vietcombank - 0123456789 - Nguyễn Văn A</li>
+                                    <li><i class="zmdi zmdi-caret-right-circle"></i>TK Techcombank - 0123456789 - Chủ TK Nguyễn Văn A</li>
+                                    <li><i class="zmdi zmdi-caret-right-circle"></i>TK ACB - 0123456789 - Chủ TK Nguyễn Văn A</li>
+                                    <li><i class="zmdi zmdi-caret-right-circle"></i>TK Momo - 0123456789 - Chủ TK Nguyễn Văn A</li>
+                                    <li><i class="zmdi zmdi-caret-right-circle"></i>TK Airpay - 0123456789 - Chủ TK Nguyễn Văn A</li>
+                                </ul>
+                            </div>
+                            <!-- <div class="puick-contact-area mt--60">
+                                <h2 class="section-title-3">Quick Contract</h2>
+                                <a href="phone:+8801722889963">+012 345 678 102 </a>
+                            </div> -->
+                                                        <!-- Start Payment Way -->
+                            <div class="our-payment-sestem">
+                                <br>
+                                <p class="note-desc">*Khách hành chuyển khoản thành công thì nhấn vào xác nhận thanh toán để nhân viên check đơn hàng.</p>
+                                
+                                <div class="wc-proceed-to-checkout">
+                                    <a class="ts-btn btn-light btn-large hover-theme" href="{% url 'coming' %}">Xác nhận thanh toán</a>
+                                </div>  
+                            </div>
+                            <!-- End Payment Way -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Checkout Area -->
+		{% endblock %}
+		

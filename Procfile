@@ -1,0 +1,1 @@
+web: gunicorn shop2but1.wsgi --log-file -

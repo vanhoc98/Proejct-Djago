@@ -1,0 +1,129 @@
+{% extends 'home.html' %}
+{% load static %}
+{% load carts_extra %}
+
+{% block title %}
+Giỏ hàng
+{% endblock %}
+
+		{% block content %}
+        <!-- Start Bradcaump area -->
+        <div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url({% static 'images/bg/3.jpg' %}) no-repeat scroll center center / cover ;">
+            <div class="ht__bradcaump__wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="bradcaump__inner text-center">
+                                <h2 class="bradcaump-title">Giỏ hàng</h2>
+                                <nav class="bradcaump-inner">
+                                  <a class="breadcrumb-item" href="{% url 'home' %}">Trang chủ</a>
+                                  <span class="brd-separetor">/</span>
+                                  <span class="breadcrumb-item active">Giỏ hàng</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Bradcaump area -->
+        <!-- cart-main-area start -->
+        <div class="cart-main-area ptb--120 bg__white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <form action="#">               
+                            <div class="table-content table-responsive">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="product-thumbnail">Ảnh sản phẩm</th>
+                                            <th class="product-name">Tên sản phẩm</th>
+                                            <th class="product-price">Giá</th>
+                                            <!-- <th class="product-quantity">Quantity</th>
+                                            <th class="product-subtotal">Total</th> -->
+                                            <th class="product-remove">Xóa</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for i in item %}
+                                        <tr>
+                                            <td class="product-thumbnail"><a href="{% url 'products:product_detail' i.prod_id %}"><img src="{% static i.prod_imgage %}" alt="product img" /></a></td>
+                                            <td class="product-name"><a href="{% url 'products:product_detail' i.prod_id %}">{{ i.prod_name }}</a></td>
+                                            <td class="product-price"><span class="amount">₫{{ i.prod_price }}</span></td>
+                                            <!-- <td class="product-quantity"><input type="number" value="1" /></td>
+                                            <td class="product-subtotal">£165.00</td> -->
+                                            <td class="product-remove"><a href="#">X</a></td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8 col-sm-7 col-xs-12">
+                                    <div class="buttons-cart">
+                                        <input type="submit" value="Cập nhật giỏ" />
+                                        <a href="{% url 'home' %}">Tiếp tục mua</a>
+                                    </div>
+                                    <!-- <div class="coupon">
+                                        <h3>Coupon</h3>
+                                        <p>Enter your coupon code if you have one.</p>
+                                        <input type="text" placeholder="Coupon code" />
+                                        <input type="submit" value="Apply Coupon" />
+                                    </div> -->
+                                </div>
+                                <div class="col-md-4 col-sm-5 col-xs-12">
+                                    <div class="cart_totals">
+                                        <h2>Đơn hàng</h2>
+                                        <table>
+                                            <tbody>
+                                                <tr class="cart-subtotal">
+                                                    <th></th>
+                                                    <td><span class="amount">Giỏ có {{ count }} sản phẩm</span></td>
+                                                </tr>
+                                                <tr class="cart-subtotal">
+                                                    <th>Tổng tiền hàng</th>
+                                                    <td><span class="amount">₫{{ item|total }}</span></td>
+                                                </tr>
+                                                <tr class="shipping">
+                                                    <th>Phí vận chuyển</th>
+                                                    <td>
+                                                        <ul id="shipping_method">
+                                                            <li>
+                                                                <!-- <input type="radio" /> --> 
+                                                                <label>
+                                                                    <!-- Flat Rate:  --><span class="amount">₫30.000</span>
+                                                                </label>
+                                                            </li>
+                                                            <!-- <li>
+                                                                <input type="radio" /> 
+                                                                <label>
+                                                                    Free Shipping
+                                                                </label>
+                                                            </li> -->
+                                                            <li></li>
+                                                        </ul>
+                                                        <!-- <p><a class="shipping-calculator-button" href="#">Calculate Shipping</a></p> -->
+                                                    </td>
+                                                </tr>
+                                                <tr class="order-total">
+                                                    <th>Tổng cộng</th>
+                                                    <td>
+                                                        <strong><span class="amount">₫{{ item|sumtotal }}</span></strong>
+                                                    </td>
+                                                </tr>                                           
+                                            </tbody>
+                                        </table>
+                                        <div class="wc-proceed-to-checkout">
+                                            <a href="{% url 'checkout' %}">Xử lý thanh toán</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- cart-main-area end -->
+        {% endblock %}
