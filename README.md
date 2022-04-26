@@ -1,6 +1,6 @@
-# ĐỒ ÁN 1 - 2020.2 - HUST
-##### Sinh viên thực hiện: Nguyễn Trần Thức
-##### Giảng viên hướng dẫn: TS. Nguyễn Huy Trường
+# Website bán hàng Thương mại điện tử
+##### Sinh viên thực hiện: Hà Văn Học
+##### Source code: Nguyễn Trần Thức
 
 ### Công nghệ sử dụng
 Django, Heroku, Freenom
