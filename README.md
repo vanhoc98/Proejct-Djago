@@ -68,8 +68,5 @@ https://www.overleaf.com/read/hhzhfvjhppys
 
 ### Demo 
 
-http://project1.thucnguyen.tk/
+https://vanhoc98.github.io/Web-rovot/
 
-(hoặc: http://2but1.ml/)
-
-(hoặc: https://doan1-2but1store.herokuapp.com/)
