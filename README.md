@@ -1,5 +1,7 @@
 # Website bán hàng Thương mại điện tử
 ##### Sinh viên thực hiện: Hà Văn Học
+##Source code: Nguyễn Trần Thức
+
 
 ### Công nghệ sử dụng
 Django, Heroku, Freenom
